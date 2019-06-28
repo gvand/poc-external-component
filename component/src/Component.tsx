@@ -55,10 +55,20 @@ const mapDispatchToProps = (dispatch: Redux.Dispatch) => ({
 const ConnectedComponent = ReactRedux.connect(mapStateToProps, mapDispatchToProps)(IncrementDecrementComponent);
 
 const ProviderComponent: React.FC<MessageProps> = ({ message }) => {
+    const [external, setExternal] = React.useState(false);
+    React.useEffect(() => {
+        // @ts-ignore
+        import('./test.tsx')
+            .then(external => {
+                console.log(external.default(), '??');
+                setExternal(true);
+            });
+    });
     return (
         <ReactRedux.Provider store={store}>
-            <h2>First Component with Message: "{ message }" and it's own redux store</h2>
+            <h2>First Component with Message: "{ message }" and its own redux store</h2>
             <ConnectedComponent/>
+            <p>{external ? 'Dynamically loaded component' : 'Did not yet dynamically load component'}</p>
         </ReactRedux.Provider>
   );
 };
