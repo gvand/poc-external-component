@@ -1,0 +1,1 @@
+# POC: Loading of External React Components

@@ -1,0 +1,46 @@
+{
+  "name": "poc-main-application",
+  "version": "1.0.0",
+  "description": "POC Main Application",
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.dev.config.js --hot"
+  },
+  "author": "Gerbrand van Dantzig",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@types/react": "^16.8.22",
+    "@types/react-dom": "^16.8.4",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-dynamic-import-node": "^2.2.0",
+    "babel-plugin-file-loader": "^1.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "prettier": "^1.17.1",
+    "source-map-loader": "^0.2.4",
+    "typescript": "^3.5.1",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1",
+    "webpack-polyfill-injector": "^3.0.2"
+  },
+  "dependencies": {
+    "@babel/standalone": "^7.4.5",
+    "@types/ramda": "^0.26.12",
+    "@types/react-redux": "^7.1.0",
+    "ramda": "^0.26.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.1"
+  }
+}
